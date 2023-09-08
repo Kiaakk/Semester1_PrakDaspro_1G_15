@@ -3,5 +3,6 @@ public class Cobacoba1 {
         System.out.println("Ini hanya coba coba");
         System.out.println("Heheheh cuma coba coba");
         System.out.println("Coba ke 2");
+        System.out.println("Kelar dong heheh");
     }
 }
