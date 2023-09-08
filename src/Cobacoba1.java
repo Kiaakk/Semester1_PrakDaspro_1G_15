@@ -4,5 +4,6 @@ public class Cobacoba1 {
         System.out.println("Heheheh cuma coba coba");
         System.out.println("Coba ke 2");
         System.out.println("Kelar dong heheh");
+        System.out.println("Kelar");
     }
 }
