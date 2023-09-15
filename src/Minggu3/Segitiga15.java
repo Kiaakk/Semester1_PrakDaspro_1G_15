@@ -4,14 +4,14 @@ import java.util.Scanner;
 
 public class Segitiga15 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner sc15 = new Scanner(System.in);
         int alas, tinggi;
         float luas;
 
         System.out.println("Masukkan alas: ");
-        alas = sc.nextInt();
+        alas = sc15.nextInt();
         System.out.println("Masukkan tinggi: ");
-        tinggi = sc.nextInt();
+        tinggi = sc15.nextInt();
 
         luas = alas * tinggi / 2;
         System.out.println("Luas segitiga: " + luas);
