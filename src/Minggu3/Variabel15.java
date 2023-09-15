@@ -7,7 +7,7 @@ public class Variabel15 {
         char jenisKelamin = 'L';
         byte _umur = 20;
         double $ipk = 3.24, tinggi = 1.78;
-        System.out.println(hobbySaya);
+        System.out.println("Hobby saya adalah = " + hobbySaya);
         System.out.println("Apakah pandai? " + isPinter);
         System.out.println("Jenis kelamin: " + jenisKelamin);
         System.out.println("Umurku saat ini " + _umur);
