@@ -9,13 +9,13 @@ public class Lingkaran15 {
         Scanner sc15 = new Scanner(System.in);
 
         int r;
-        double keliling, luas;
+        double keliling, luas, phi = 3.14;
 
         System.out.print("Masukkan jari-jari lingkaran : ");
         r = sc15.nextInt();
 
-        keliling = 2*3.14*r;
-        luas = 3.14*r*r;
+        keliling = 2*phi*r;
+        luas = phi*r*r;
 
         System.out.println("Keliling = " + keliling);
         System.out.println("Luas = " + luas);
