@@ -37,8 +37,10 @@ public class PemilihanPercobaan2_15 {
             System.out.println("Nilai anda adalah C");
         } else if (total > 39 && total <= 50) {
             System.out.println("Nilai anda adalah D");
-        } else{
+        } else if (total <= 39) {
             System.out.println("Nilai anda adalah E");
+        } else {
+            System.out.println("Nilai anda tidak tersedia");
         }
     }
 
