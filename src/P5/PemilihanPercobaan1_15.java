@@ -12,10 +12,7 @@ public class PemilihanPercobaan1_15 {
         System.out.print("Masukkan angka :  ");
         angka = input15.nextInt();
 
-        if (angka % 2 == 0) {
-            System.out.println("Angka " + angka + " bilangan genap");
-        } else {
-            System.out.println("Angka " + angka + " bilangan ganjil");
-        }
+        String hasil = (angka % 2 == 0) ? "Genap" : "Ganjil";
+        System.out.println("Angka " + angka + " adalah " + hasil);
     }
 }
