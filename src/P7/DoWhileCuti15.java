@@ -29,6 +29,8 @@ public class DoWhileCuti15 {
                     System.out.println("Sisa jatah cuti Anda tidak mencukupi dan hanya tersisa " + jatahCuti + " hari");
                     continue;
                 }
+            } else {
+                break;
             }
         } while (jatahCuti > 0);
     }
