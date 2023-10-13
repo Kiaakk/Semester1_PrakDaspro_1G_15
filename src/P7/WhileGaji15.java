@@ -30,6 +30,10 @@ public class WhileGaji15 {
                 gajiLembur = jumalhJamLembur * 100000;
             } else if (jabatan.equalsIgnoreCase("karyawan")) {
                 gajiLembur = jumalhJamLembur * 75000;
+            } else {
+                i--;
+                System.out.println("Jabatan Invalid");
+                continue;
             }
             totalGajiLembur += gajiLembur;
         }
