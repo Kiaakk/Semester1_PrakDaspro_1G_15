@@ -3,9 +3,9 @@ package P7;
 import java.util.Scanner;
 
 public class DoWhileCuti15 {
-    
+
     public static void main(String[] args) {
-        
+
         Scanner input15 = new Scanner(System.in);
 
         int jatahCuti, jumlahHari;
@@ -26,12 +26,10 @@ public class DoWhileCuti15 {
                     jatahCuti -= jumlahHari;
                     System.out.println("Sisa jatah cuti " + jatahCuti);
                 } else {
-                    System.out.println("Sisa jatah cuti Anda tidak mencukupi dan hanya tersisa " + jatahCuti);
-                    continue;
+                    System.out.println("Sisa jatah cuti Anda tidak mencukupi");
+                    break;
                 }
-            } else if (konfirmasi.equalsIgnoreCase("n")) {
-                break;
-            } 
+            }
         } while (jatahCuti > 0);
     }
 }
