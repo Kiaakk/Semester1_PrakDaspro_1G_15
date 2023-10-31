@@ -7,6 +7,7 @@ public class ArrayRataNilai15 {
         Scanner input15 = new Scanner(System.in);
 
         int[] nilaiMhs = new int[10];
+        int lulus = 0;
         double total = 0;
         double rata2;
 
@@ -19,6 +20,13 @@ public class ArrayRataNilai15 {
         }
         rata2 = total / nilaiMhs.length;
         System.out.println("Rata-rata nilai = "+rata2);
+        
+        for (int i = 0; i < nilaiMhs.length; i++) {
+            if (nilaiMhs[i] > 70) {
+                lulus++;
+            }
+        }
+        System.out.println("Banyak mahasiswa yang lulus adalah = " + lulus);
 
     }
 }
