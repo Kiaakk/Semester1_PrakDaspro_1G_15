@@ -18,13 +18,21 @@ public class LinearSearch15 {
         int key = input15.nextInt();
 
         int hasil = 0;
+        boolean isFind = false;
         for (int i = 0; i < jmlArray; i++) {
             if (isiArray[i] == key) {
                 hasil = i;
+                isFind = true;
                 break;
+            } else {
+                isFind = false;
             }
         }
-        System.out.println("Key ada di posisi indeks ke-"+hasil);
+        if (isFind) {
+            System.out.println("Key ada di posisi indeks ke-"+hasil);
+        } else {
+            System.out.println("Key tidak ditemukan");
+        }
 
     }
 }
