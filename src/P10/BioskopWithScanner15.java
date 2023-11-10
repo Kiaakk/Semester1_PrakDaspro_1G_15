@@ -8,7 +8,6 @@ public class BioskopWithScanner15 {
         String nama, next, back;
         boolean isFind = false;
         boolean isBund = false;
-        boolean isFull = false;
         String[][] penonton = new String[4][2];
         
         while (!isFind) {
@@ -50,7 +49,6 @@ public class BioskopWithScanner15 {
                         }
 
                         if (penonton[baris - 1][kolom -1] != null) {
-                            isFull = true;
                             System.out.println("Kursi sudah terisi. Silahkan mengulang kembali");
                             continue;
                         }
@@ -69,6 +67,7 @@ public class BioskopWithScanner15 {
                     break;
                     
                 case 2:
+
                     for (int i = 0; i < penonton.length; i++) {
                         System.out.println("Pada baris ke-" + (i+1) + " : " + String.join(", ", penonton[i]));
                     }
