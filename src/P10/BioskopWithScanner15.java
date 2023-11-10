@@ -8,6 +8,7 @@ public class BioskopWithScanner15 {
         String nama, next, back;
         boolean isFind = false;
         boolean isBund = false;
+        boolean isFull = false;
         String[][] penonton = new String[4][2];
         
         while (!isFind) {
@@ -22,7 +23,7 @@ public class BioskopWithScanner15 {
 
             switch (menu) {
                 case 1:
-                    while (!isBund) {
+                    while (!isBund) {                        
                         System.out.print("Masukkan nama : ");
                         nama = input15.nextLine();
                         
@@ -46,6 +47,12 @@ public class BioskopWithScanner15 {
                             } else {
                                 System.out.println("Input di luar batas. Input kembali (1-2)");
                             }
+                        }
+
+                        if (penonton[baris - 1][kolom -1] != null) {
+                            isFull = true;
+                            System.out.println("Kursi sudah terisi. Silahkan mengulang kembali");
+                            continue;
                         }
                         
                         penonton [baris-1][kolom-1] = nama;
