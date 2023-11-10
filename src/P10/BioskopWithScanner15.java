@@ -4,27 +4,84 @@ import java.util.Scanner;
 public class BioskopWithScanner15 {
     public static void main(String[] args) {
         Scanner input15 = new Scanner(System.in);
-        int baris, kolom;
-        String nama, next;
+        int baris, kolom, menu;
+        String nama, next, back;
+        boolean isFind = false;
         String[][] penonton = new String[4][2];
+        
+        while (!isFind) {
+            System.out.println("Pilih Menu");
+            System.out.println("1. Input data penonton");
+            System.out.println("2. Daftar penonton");
+            System.out.println("3. Exit");
 
-        while (true) {
-            System.out.print("Masukkan nama : ");
-            nama = input15.nextLine();
-            System.out.print("Masukkan baris : ");
-            baris = input15.nextInt();
-            System.out.print("Masukkan kolom : ");
-            kolom = input15.nextInt();
+            System.out.print("Pilihan Menu : ");
+            menu = input15.nextInt();
             input15.nextLine();
 
-            penonton [baris-1][kolom-1] = nama;
+            switch (menu) {
+                case 1:
+                    System.out.print("Masukkan nama : ");
+                    nama = input15.nextLine();
 
-            System.out.print("Input penonton lainnya? (y/n) : ");
-            next = input15.nextLine();
+                    System.out.print("Masukkan baris : ");
+                    baris = input15.nextInt();
+                    input15.nextLine();
 
-            if (next.equalsIgnoreCase("n")) {
-                break;
+                    System.out.print("Masukkan kolom : ");
+                    kolom = input15.nextInt();
+                    input15.nextLine();
+
+                    penonton [baris-1][kolom-1] = nama;
+
+                    System.out.print("Input penonton lainnya? (y/n) : ");
+                    next = input15.nextLine();
+
+                    if (next.equalsIgnoreCase("n")) {
+                        break;
+                    }
+                            
+                    break;
+                
+                case 2:
+                    for (int i = 0; i < penonton.length; i++) {
+                        System.out.println("Pada baris ke-" + (i+1) + " : " + String.join(", ", penonton[i]));
+                    }
+
+                    System.out.print("Balik ke menu? (y/n) : ");
+                    back = input15.nextLine();
+
+                    if (back.equalsIgnoreCase("n")) {
+                        isFind = true;
+                    }
+                    break;
+
+                case 3:
+                    isFind = true;
+                    break;
+            
             }
         }
+        
+
+
+        // while (true) {
+        //     System.out.print("Masukkan nama : ");
+        //     nama = input15.nextLine();
+        //     System.out.print("Masukkan baris : ");
+        //     baris = input15.nextInt();
+        //     System.out.print("Masukkan kolom : ");
+        //     kolom = input15.nextInt();
+        //     input15.nextLine();
+
+        //     penonton [baris-1][kolom-1] = nama;
+
+        //     System.out.print("Input penonton lainnya? (y/n) : ");
+        //     next = input15.nextLine();
+
+        //     if (next.equalsIgnoreCase("n")) {
+        //         break;
+        //     }
+        // }
     }
 }
