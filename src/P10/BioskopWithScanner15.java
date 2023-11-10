@@ -7,6 +7,7 @@ public class BioskopWithScanner15 {
         int baris, kolom, menu;
         String nama, next, back;
         boolean isFind = false;
+        boolean isBund = false;
         String[][] penonton = new String[4][2];
         
         while (!isFind) {
@@ -21,28 +22,45 @@ public class BioskopWithScanner15 {
 
             switch (menu) {
                 case 1:
-                    System.out.print("Masukkan nama : ");
-                    nama = input15.nextLine();
+                    while (!isBund) {
+                        System.out.print("Masukkan nama : ");
+                        nama = input15.nextLine();
+                        
+                        while (true) {
+                            System.out.print("Masukkan baris (1-4) : ");
+                            baris = input15.nextInt();
+                            input15.nextLine();
+                            if (baris >= 1 && baris <= 4) {
+                                break;
+                            } else {
+                                System.out.println("Input di luar batas. Input kembali (1-4)");
+                            }
+                        }
 
-                    System.out.print("Masukkan baris : ");
-                    baris = input15.nextInt();
-                    input15.nextLine();
+                        while (true) {
+                            System.out.print("Masukkan kolom (1-2) : ");
+                            kolom = input15.nextInt();
+                            input15.nextLine();
+                            if (kolom >= 1 && kolom <= 2) {
+                                break;
+                            } else {
+                                System.out.println("Input di luar batas. Input kembali (1-2)");
+                            }
+                        }
+                        
+                        penonton [baris-1][kolom-1] = nama;
+                       
+                        System.out.print("Input penonton lainnya? (y/n) : ");
+                        next = input15.nextLine();
 
-                    System.out.print("Masukkan kolom : ");
-                    kolom = input15.nextInt();
-                    input15.nextLine();
-
-                    penonton [baris-1][kolom-1] = nama;
-
-                    System.out.print("Input penonton lainnya? (y/n) : ");
-                    next = input15.nextLine();
-
-                    if (next.equalsIgnoreCase("n")) {
-                        break;
+                        if (next.equalsIgnoreCase("n")) {
+                            isBund = true;
+                            break;
+                        }
                     }
-                            
+                    
                     break;
-                
+                    
                 case 2:
                     for (int i = 0; i < penonton.length; i++) {
                         System.out.println("Pada baris ke-" + (i+1) + " : " + String.join(", ", penonton[i]));
@@ -62,26 +80,6 @@ public class BioskopWithScanner15 {
             
             }
         }
-        
-
-
-        // while (true) {
-        //     System.out.print("Masukkan nama : ");
-        //     nama = input15.nextLine();
-        //     System.out.print("Masukkan baris : ");
-        //     baris = input15.nextInt();
-        //     System.out.print("Masukkan kolom : ");
-        //     kolom = input15.nextInt();
-        //     input15.nextLine();
-
-        //     penonton [baris-1][kolom-1] = nama;
-
-        //     System.out.print("Input penonton lainnya? (y/n) : ");
-        //     next = input15.nextLine();
-
-        //     if (next.equalsIgnoreCase("n")) {
-        //         break;
-        //     }
-        // }
+    
     }
 }
