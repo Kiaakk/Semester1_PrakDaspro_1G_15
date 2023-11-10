@@ -59,7 +59,7 @@ public class BioskopWithScanner15 {
                         next = input15.nextLine();
 
                         if (next.equalsIgnoreCase("n")) {
-                            isBund = true;
+                            isBund = false;
                             break;
                         }
                     }
@@ -69,6 +69,11 @@ public class BioskopWithScanner15 {
                 case 2:
 
                     for (int i = 0; i < penonton.length; i++) {
+                        for (int j = 0; j < penonton[i].length; j++) {
+                            if (penonton[i][j] == null) {
+                                penonton[i][j] = "***";
+                            }
+                        }
                         System.out.println("Pada baris ke-" + (i+1) + " : " + String.join(", ", penonton[i]));
                     }
 
