@@ -20,10 +20,14 @@ public class NestedLoop_2341720253 {
         int city = 1;
         for (double[] kota : array) {
             System.out.print("Kota ke-" + city++ + ": ");
+            double total = 0;
             for (double suhu : kota) {
                 System.out.print(suhu + " ");
+                total += suhu;
             }
             System.out.println();
+            double rata2 = total / kota.length;
+            System.out.println("Rata-rata Suhu : " + rata2 + "\n");
         }
 
     }
