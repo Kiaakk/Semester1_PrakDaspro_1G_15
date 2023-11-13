@@ -17,10 +17,11 @@ public class NestedLoop_2341720253 {
             System.out.println();
         }
 
-        for (int i = 0; i < array.length; i++) {
-            System.out.print("Kota ke-" + (i+1) + ": ");
-            for (int j = 0; j < array[0].length; j++) {
-                System.out.print(array[i][j] + " ");
+        int city = 1;
+        for (double[] kota : array) {
+            System.out.print("Kota ke-" + city++ + ": ");
+            for (double suhu : kota) {
+                System.out.print(suhu + " ");
             }
             System.out.println();
         }
