@@ -9,6 +9,7 @@ public class ArrayDua15 {
         int[][] data = new int[4][4];
         int[] jam = {3,6,9,12};
         int[] min = {100,100,100,100};
+        int[] max = {0,0,0,0};
         double[] total = {0,0,0,0};
         double[] rata = {0,0,0,0};
 
@@ -21,6 +22,9 @@ public class ArrayDua15 {
                         data[i][j] = sc15.nextInt();
                         if (min[j] > data[i][j]) {
                             min[j] = data[i][j];
+                        } 
+                        if (max[j] < data[i][j]) {
+                            max[j] = data[i][j];
                         }
                         total[j] += data[i][j];
                         break;
@@ -30,6 +34,9 @@ public class ArrayDua15 {
                         data[i][j] = sc15.nextInt();
                         if (min[j] > data[i][j]) {
                             min[j] = data[i][j];
+                        } 
+                        if (max[j] < data[i][j]) {
+                            max[j] = data[i][j];
                         }
                         total[j] += data[i][j];
                         break;
@@ -39,6 +46,9 @@ public class ArrayDua15 {
                         data[i][j] = sc15.nextInt();
                         if (min[j] > data[i][j]) {
                             min[j] = data[i][j];
+                        } 
+                        if (max[j] < data[i][j]) {
+                            max[j] = data[i][j];
                         }
                         total[j] += data[i][j];
                         break;
@@ -48,6 +58,9 @@ public class ArrayDua15 {
                         data[i][j] = sc15.nextInt();
                         if (min[j] > data[i][j]) {
                             min[j] = data[i][j];
+                        }
+                        if (max[j] < data[i][j]) {
+                            max[j] = data[i][j];
                         }
                         total[j] += data[i][j];
                         break;
@@ -64,8 +77,8 @@ public class ArrayDua15 {
             System.out.println("");
         }
         System.out.println("--------------------");
-        System.out.printf("Rata-rata suhu: %.2f\n", rata[0]);
-        System.out.printf("Persentase kelembaban terendah: %s\n", min[1]);
+        System.out.printf("Rata-rata suhu                       : %.2f\n", rata[0]);
+        System.out.printf("Persentase kelembaban terendah       : %s\n", min[1]); 
         System.out.println("Kolom kecepatan angin : ");
         for (int i = 0; i < data.length; i++) {
             for (int j = 0; j < rata.length; j++) {
