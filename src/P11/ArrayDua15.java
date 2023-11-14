@@ -77,8 +77,9 @@ public class ArrayDua15 {
             System.out.println("");
         }
         System.out.println("--------------------");
-        System.out.printf("Rata-rata suhu                       : %.2f\n", rata[0]);
-        System.out.printf("Persentase kelembaban terendah       : %s\n", min[1]); 
+        System.out.printf("Rata-rata suhu                     : %.2f\n", rata[0]);
+        System.out.printf("Persentase kelembaban terendah     : %s\n", min[1]); 
+        System.out.printf("Persentase index UV tertinggi      : %s\n", max[3]); 
         System.out.println("Kolom kecepatan angin : ");
         for (int i = 0; i < data.length; i++) {
             for (int j = 0; j < rata.length; j++) {
