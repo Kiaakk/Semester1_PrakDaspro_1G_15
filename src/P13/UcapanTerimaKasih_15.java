@@ -7,7 +7,6 @@ public class UcapanTerimaKasih_15 {
     static Scanner sc15 = new Scanner(System.in);
     public static void main(String[] args) {
         UcapanTerimaKasih();
-        UcapanTambahan();
     }
 
     public static String PenerimaUcapan() {
@@ -20,11 +19,12 @@ public class UcapanTerimaKasih_15 {
         String nama = PenerimaUcapan();
         System.out.println("Thank you " + nama + " for being the best teacher in the world.\n" +
         "You inspired in me a love for learning and made me feel like I could ask you anything.");
+        System.out.print("Ucapan tambahan untuk " + nama + " : ");
+        String ucapan = sc15.nextLine();
+        System.out.println(UcapanTambahan(ucapan));
     }
 
-    public static String UcapanTambahan() {
-        System.out.println("Tuliskan ucapan tambahan :");
-        String ucapTambah = sc15.nextLine();
-        return ucapTambah;
+    public static String UcapanTambahan(String ucapan) {
+        return ucapan;
     }
 }
