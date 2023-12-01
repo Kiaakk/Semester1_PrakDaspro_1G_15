@@ -77,16 +77,13 @@ public class MengisiArray2D_15 {
         int mawaTertinggi = 0;
 
         for (int i = 0; i < nilaiMawa.length; i++) {
-            int totalNilaiMawa = 0;
             for (int j = 0; j < nilaiMawa[i].length; j++) {
-                totalNilaiMawa += nilaiMawa[i][j];
-            }
-            if (totalNilaiMawa > nilaiTertinggi) {
-                nilaiTertinggi = totalNilaiMawa;
-                mawaTertinggi = i;
+                if (nilaiTertinggi < nilaiMawa[i][j]) {
+                    nilaiTertinggi = nilaiMawa[i][j];
+                    mawaTertinggi = i;
+                }
             }
         }
-
         System.out.println("Mahasiswa dengan nilai tertinggi adalah " + students[mawaTertinggi] + " dengan total nilai " + nilaiTertinggi);
     }
 }
