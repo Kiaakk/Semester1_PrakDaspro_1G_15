@@ -4,25 +4,26 @@ import java.util.Scanner;
 
 public class PenjumlahanRekursif {
 
+    static Scanner sc15 = new Scanner(System.in);
+
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
 
         System.out.print("Masukkan nilai f: ");
-        int f = sc.nextInt();
+        int f = sc15.nextInt();
 
-        int hasil = penjumlahanRekursif(f);
-
-        System.out.println("Penjumlahan dari 1 sampai " + f + " adalah: " + hasil);
-
-        sc.close();
+        System.out.print("Penjumlahan dari 1 sampai " + f + " adalah: ");
+        int hasil = penjumlahanRekursif(f, 1);
+        System.out.print(" = " + hasil);
     }
 
-    static int penjumlahanRekursif(int n) {
+    static int penjumlahanRekursif(int n, int step) {
         if (n <= 1) {
+            System.out.print(n);
             return n;
         } else {
-            return n + penjumlahanRekursif(n - 1);
+            int hasil = penjumlahanRekursif(n - 1, step);
+            System.out.print(" + " + n);
+            return n + hasil;
         }
     }
 }
-
